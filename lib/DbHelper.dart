@@ -36,14 +36,7 @@ class DbHelper {
           )
         ''');
 
-        await db.execute('''
-          CREATE TABLE todo_items(
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            list_id INTEGER,
-            item TEXT,
-            FOREIGN KEY(list_id) REFERENCES todo_lists(id) ON DELETE CASCADE
-          )
-        ''');
+        
       },
     );
   }
